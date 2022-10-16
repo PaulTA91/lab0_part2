@@ -1,8 +1,15 @@
 let currentNode;
 
+function alterCell() {
+  currentNode = document.getElementById("table1").rows[0].cells[1];
+  const newContent =
+    '<span id="redcell">This table cell has been altered</span>';
+  currentNode.innerHTML = newContent;
+}
+
 function addNewParagraph() {
   currentNode = document.getElementById("paragraph1");
-  input = document.getElementById("textarea1").value;
+  input = document.getElementById("textarea2").value;
   const newNode = document.createElement("p");
   newNode.appendChild(document.createTextNode(input));
   currentNode.parentNode.insertBefore(newNode, currentNode);
